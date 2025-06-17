@@ -32,9 +32,7 @@ This project uses data from the New York Times Books API. Usage is subject to th
 
 - Get started with NYT Public API -> [Steps](https://developer.nytimes.com/get-started)
 
-- Make sure you've installed and running Docker Desktop or Docker Engine:
-  - [Docker Desktop](https://docs.docker.com/desktop/)
-  - [Docker Engine](https://docs.docker.com/engine/install/)
+- Make sure you've installed and running [Docker Desktop](https://docs.docker.com/desktop/) or [Docker Engine](https://docs.docker.com/engine/install/):
 
 ### Initialize Services
 
@@ -61,23 +59,23 @@ This project uses data from the New York Times Books API. Usage is subject to th
 
 ### Settings
 
-- pgAdmin
+**pgAdmin**
 
-  1. Log in to [pgAdmin](http://localhost:5050) with Username:'admin@admin.com' and Password:'root'.
-  2. On the left pannel, right click on Servers --> Register --> Server
-  3. On General tab, enter Name: "postgres".
-  4. On Connection tab, enter Hostname: "postgres", Port: "5432", Username:'airflow', and Password:'airflow'.
-  5. You should be connected to Postgresdb from pgAdmin and see the database "booksdb" created automatically.
+- Log in to [pgAdmin](http://localhost:5050) with Username:'admin@admin.com' and Password:'root'.
+- On the left pannel, right click on Servers --> Register --> Server
+- On General tab, enter Name: "postgres".
+- On Connection tab, enter Hostname: "postgres", Port: "5432", Username:'airflow', and Password:'airflow'.
+- You should be connected to Postgresdb from pgAdmin and see the database "booksdb" created automatically.
      ![alt text](Postgres-Connections.png)
 
-- Airflow UI
+**Airflow UI**
 
-  1. Log in to [Airflow UI](http://localhost:8080) with 'airflow' for both your Username and Password.
-  2. Select Admin tab --> Connections --> Add Connection
-  3. Enter Connection ID: "postgres_nytimes_connection" and Connection Type: "postgres"
-  4. Enter Host: "postgres", Login:"airflow", Password:"airflow", Port: "5432", and Database: "booksdb".
-  5. Select Admin tab --> Variables --> Add Variable
-  6. Enter Key: "nytimes_api_key" and as Value your api key value provided by NY Times API.
+- Log in to [Airflow UI](http://localhost:8080) with 'airflow' for both your Username and Password.
+- Select Admin tab --> Connections --> Add Connection
+- Enter Connection ID: "postgres_nytimes_connection" and Connection Type: "postgres"
+- Enter Host: "postgres", Login:"airflow", Password:"airflow", Port: "5432", and Database: "booksdb".
+- Select Admin tab --> Variables --> Add Variable
+- Enter Key: "nytimes_api_key" and as Value your api key value provided by NY Times API.
 
 ### Run Pipeline
 
