@@ -1,21 +1,28 @@
 # NY Times Best Sellers Data Pipeline
 
-A simple data pipeline...
+A simple data pipeline that moves data from New York Times API to PostgreSQL with Airflow and Docker.
 
-Deployment of a data pipeline that extracts...
+The objective of the project is to build an automated ETL data pipeline that collects weekly data from the New York Times API using Apache Airflow. The data is stored in a PostgreSQL database for analysis. The entire system is deployed in Docker containers, ensuring portability and easy maintenance.
 
-## Dataset
+## Description
+
+### Dataset
+
+The [New York Times Books API](https://developer.nytimes.com/docs/books-product) provides an overview service to get all the Best Sellers lists for a given week. The lists are published on Wednesday around 7 pm US Eastern time. 
+
+For our purpose, the orchestration workflow is scheduled to run once a week after the New York Times API publishes new data, and it only takes the most recent. It's possible to implement an incremental load in the Postgres database to cumulate the data and apply historical analysis.
+
 
 This project uses data from the New York Times Books API. Usage is subject to the Developer Terms of Use, and attribution to NYT is required for any publication or visualization of the data.
 
-## Tools and Technologies
+### Tools and Technologies
 
 - Python
 - PostgreSQL
 - Airflow
 - Docker
 
-## Data Architecture
+### Data Architecture
 
 ![alt text](NY-Times-Best-Sellers-Data-Pipeline.png)
 
@@ -61,7 +68,7 @@ This project uses data from the New York Times Books API. Usage is subject to th
   3. On General tab, enter Name: "postgres".
   4. On Connection tab, enter Hostname: "postgres", Port: "5432", Username:'airflow', and Password:'airflow'.
   5. You should be connected to Postgresdb from pgAdmin and see the database "booksdb" created automatically.
-     ![alt text](image.png)
+     ![alt text](Postgres-Connections.png)
 
 - Airflow UI
 
@@ -75,12 +82,3 @@ This project uses data from the New York Times Books API. Usage is subject to th
 ### Run Pipeline
 
 - On Airflow UI, select the DAG and click on Trigger.
-
-- To stop Airflow
-  ```
-  docker compose down
-  ```
-
-## Remaining tasks
-
-1. Finish project and dataset description including schedule
