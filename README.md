@@ -1,4 +1,4 @@
-# NY Times Best Sellers Data pipeline
+# NY Times Best Sellers Data Pipeline
 
 A simple data pipeline...
 
@@ -32,25 +32,25 @@ This project uses data from the New York Times Books API. Usage is subject to th
 ### Initialize Services
 
 - Clone git repo
-  """
+  ```
   git clone XXX
   cd amazon-books-data-pipeline
-  """
+  ```
 
 - Initialize airflow database
-  """
+  ```
   docker compose up airflow-init
-  """
+  ```
 
 - Start services
-  """
+  ```
   docker compose up
-  """
+  ```
 
 - In a second terminal check that the docker containers status is healthy
-  """
+  ```
   docker ps
-  """
+  ```
 
 ### Settings
 
@@ -77,9 +77,9 @@ This project uses data from the New York Times Books API. Usage is subject to th
 - On Airflow UI, select the DAG and click on Trigger.
 
 - To stop Airflow
-  """
+  ```
   docker compose down
-  """
+  ```
 
 ## Remaining tasks
 
