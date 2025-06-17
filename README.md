@@ -38,7 +38,11 @@ This project uses data from the New York Times Books API. Usage is subject to th
 
 - Clone git repo:
   ```
-  git clone XXX
+  git clone https://github.com/borfergi/nytimes-best-sellers-data-pipeline.git
+  ```
+
+- Change into the directory:
+  ```
   cd amazon-books-data-pipeline
   ```
 
