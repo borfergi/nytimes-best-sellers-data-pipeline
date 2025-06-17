@@ -30,29 +30,29 @@ This project uses data from the New York Times Books API. Usage is subject to th
 
 ### Pre-requisites
 
-- Get started with NYT Public API -> [Steps](https://developer.nytimes.com/get-started)
+- Get started with NYT Public API -> [Steps](https://developer.nytimes.com/get-started).
 
-- Make sure you've installed and running [Docker Desktop](https://docs.docker.com/desktop/) or [Docker Engine](https://docs.docker.com/engine/install/)
+- Make sure you've installed and running [Docker Desktop](https://docs.docker.com/desktop/) or [Docker Engine](https://docs.docker.com/engine/install/).
 
 ### Initialize Services
 
-- Clone git repo
+- Clone git repo:
   ```
   git clone XXX
   cd amazon-books-data-pipeline
   ```
 
-- Initialize airflow database
+- Initialize airflow database:
   ```
   docker compose up airflow-init
   ```
 
-- Start services
+- Start services:
   ```
   docker compose up
   ```
 
-- In a second terminal check that the docker containers status is healthy
+- In a second terminal check that the docker containers status is healthy:
   ```
   docker ps
   ```
