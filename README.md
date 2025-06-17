@@ -8,7 +8,7 @@ The objective of the project is to build an automated ETL data pipeline that col
 
 ### Dataset
 
-The [New York Times Books API](https://developer.nytimes.com/docs/books-product) provides an overview service to get all the Best Sellers lists for a given week. The lists are published on Wednesday around 7 pm US Eastern time. 
+The [New York Times](https://developer.nytimes.com/) Books API provides an overview service to get all the Best Sellers lists for a given week. The lists are published on Wednesday around 7 pm US Eastern time. 
 
 For our purpose, the orchestration workflow is scheduled to run once a week after the New York Times API publishes new data, and it only takes the most recent. It's possible to implement an incremental load in the Postgres database to cumulate the data and apply historical analysis.
 
@@ -32,7 +32,7 @@ This project uses data from the New York Times Books API. Usage is subject to th
 
 - Get started with NYT Public API -> [Steps](https://developer.nytimes.com/get-started)
 
-- Make sure you've installed and running [Docker Desktop](https://docs.docker.com/desktop/) or [Docker Engine](https://docs.docker.com/engine/install/):
+- Make sure you've installed and running [Docker Desktop](https://docs.docker.com/desktop/) or [Docker Engine](https://docs.docker.com/engine/install/)
 
 ### Initialize Services
 
@@ -61,21 +61,21 @@ This project uses data from the New York Times Books API. Usage is subject to th
 
 **pgAdmin**
 
-- Log in to [pgAdmin](http://localhost:5050) with Username:'admin@admin.com' and Password:'root'.
+- Log in to [pgAdmin](http://localhost:5050) with Username: `admin@admin.com` and Password: `root`.
 - On the left pannel, right click on Servers --> Register --> Server
-- On General tab, enter Name: "postgres".
-- On Connection tab, enter Hostname: "postgres", Port: "5432", Username:'airflow', and Password:'airflow'.
-- You should be connected to Postgresdb from pgAdmin and see the database "booksdb" created automatically.
+- On General tab, enter Name: `postgres`
+- On Connection tab, enter Hostname: `postgres`, Port: `5432`, Username: `airflow`, and Password: `airflow`"
+- You should be connected to Postgresdb from pgAdmin and see the database `booksdb` created automatically
      ![alt text](Postgres-Connections.png)
 
 **Airflow UI**
 
-- Log in to [Airflow UI](http://localhost:8080) with 'airflow' for both your Username and Password.
+- Log in to [Airflow UI](http://localhost:8080) with `airflow` for both your Username and Password
 - Select Admin tab --> Connections --> Add Connection
-- Enter Connection ID: "postgres_nytimes_connection" and Connection Type: "postgres"
-- Enter Host: "postgres", Login:"airflow", Password:"airflow", Port: "5432", and Database: "booksdb".
+- Enter Connection ID: `postgres_nytimes_connection` and Connection Type: `postgres`
+- Enter Host: `postgres`, Login: `airflow`, Password: `airflow`, Port: `5432`, and Database: `booksdb`
 - Select Admin tab --> Variables --> Add Variable
-- Enter Key: "nytimes_api_key" and as Value your api key value provided by NY Times API.
+- Enter Key: `nytimes_api_key` and as Value your api key value provided by NY Times API.
 
 ### Run Pipeline
 
